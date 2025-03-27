@@ -129,7 +129,7 @@ function updateFileStream() {
   });
 }
 
-// Delete a file using streams (Note: streams don't have a direct method for deletion, so we use unlink here)
+// Delete a file using streams 
 function deleteFileStream() {
   fs.unlink(filePath, (err) => {
     if (err) {
@@ -140,7 +140,6 @@ function deleteFileStream() {
   });
 }
 
-// === Example Usage ===
 
 // Synchronous Operations
 createFileSync();
@@ -163,3 +162,5 @@ setTimeout(() => {
   updateFileStream();
   deleteFileStream();
 }, 1000);
+
+//compile - tsc src/task3.ts
