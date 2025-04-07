@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { fetchUsers, fetchPosts } from './apiRoutes'; // Adjust the path based on your project structure
+import { fetchUsers, fetchPosts } from './apiRoutes'; 
 
 jest.mock('axios');
 
