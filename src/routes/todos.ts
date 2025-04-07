@@ -7,7 +7,7 @@ const todos: Todo[] = [];
 const router = Router();
 
 
-const fetchTodos = (): Promise<Todo[]> => {
+export const fetchTodos = (): Promise<Todo[]> => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(todos);
@@ -22,7 +22,8 @@ router.get('/', async (req, res, next) => {
 
     }
     catch (error) {
-        next(error);
+        console.error("Error fetching todos:", error);
+        res.status(500).json({ message: "Internal Server Error" });
     }
 });
 
